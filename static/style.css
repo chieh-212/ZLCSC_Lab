@@ -1,0 +1,85 @@
+body {
+  box-sizing: border-box;
+  font-family: "Noto Sans TC", sans-serif;
+  background: rgb(32, 48, 54);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+h2{
+  color:aliceblue;
+}
+.login {
+  width: 300px;
+  height: 350px;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 20px;
+  border: 5px solid #fff;
+  box-shadow: 0 0 30px #000;
+  backdrop-filter: blur(5px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.form {
+  width: 100%;
+}
+.form .loginGroup {
+  margin-bottom: 10px;
+}
+.form label {
+  color: #fff;
+  line-height: 2.5;
+  font-weight: 300;
+  display: block;
+}
+.form label input {
+  outline: none;
+  padding: 10px 0;
+  padding-left: 12px;
+  width: 95%;
+  border: 2px solid #aaa;
+  border-radius: 6px;
+}
+.form label input:focus {
+  border: 2px solid #72a8f0;
+}
+.btnGroup {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+.btn {
+  padding: 10px 50px;
+  border-radius: 6px;
+  outline: none;
+  border: none;
+  font-weight: 300;
+  font-size: 16px;
+  color: #fff;
+  cursor: pointer;
+}
+.btnAccess {
+  background-color: #2bc42b;
+}
+.btnAccess:hover {
+  background-color: #24a824;
+}
+.btnCancel {
+  background-color: #f08282;
+}
+.btnCancel:hover {
+  background-color: #e06b6b;
+}
+.magic_display {
+  margin-top: 20px;
+  font-size: 12px;
+  color: #ccc;
+  text-align: center;
+}
+.form .magic_display {
+  color:aliceblue;
+}

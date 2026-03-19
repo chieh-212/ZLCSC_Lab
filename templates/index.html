@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>login screen</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<div class="login">
+   <form class="form" method="post">
+     <h2>Login Screen</h2>
+     <div class="loginGroup">
+       <label> username
+         <input type="text" name="username" id="username" placeholder="enter your username">
+       </label>
+     </div>
+     <div class="loginGroup">
+       <label> password
+         <input type="password" name="password" id="password" placeholder="enter your password">
+       </label>
+     </div>
+     <div class="btnGroup">
+       <button class="btn btnAccess">Confirm</button>
+       <button class="btn btnCancel">Cancel</button>
+    </div>
+     <div class="magic_display">
+        <p id="sqlDisplay">"SELECT * FROM login WHERE username = '" + document.getElementById('username').value + "' AND password = '" + document.getElementById('password').value + "'"</p>
+     </div>
+ </form>
+ </div>
+ <script>
+     function updateSQL() {
+         const username = document.getElementById('username').value;
+         const password = document.getElementById('password').value;
+         const sql = "SELECT * FROM login WHERE username = '" + username + "' AND password = '" + password + "'";
+         document.getElementById('sqlDisplay').textContent = sql;
+     }
+     document.getElementById('username').addEventListener('input', updateSQL);
+     document.getElementById('password').addEventListener('input', updateSQL);
+ </script>
+ {% if message %}
+ <script>
+     alert("{{ message }}");
+ </script>
+ {% endif %}
+</body>
+</html>
