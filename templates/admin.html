@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>管理員控制面板</title>
+    <style>
+        /* 基礎重置 */
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { display: flex; height: 100vh; background-color: #f4f7f6; color: #333; }
+
+        /* 側邊欄 (Sidebar) */
+        .sidebar { width: 250px; background-color: #2c3e50; color: white; display: flex; flex-direction: column; }
+        .sidebar-header { padding: 20px; font-size: 20px; font-weight: bold; text-align: center; border-bottom: 1px solid #1a252f; }
+        .nav-links { list-style: none; padding: 20px 0; flex-grow: 1; }
+        .nav-links li { padding: 15px 20px; cursor: pointer; transition: background 0.3s; }
+        .nav-links li:hover, .nav-links li.active { background-color: #34495e; border-left: 4px solid #3498db; }
+        .nav-links li a { color: white; text-decoration: none; display: block; }
+
+        /* 主內容區 (Main Content) */
+        .main-content { flex-grow: 1; display: flex; flex-direction: column; overflow-y: auto; }
+
+        /* 頂部標頭 (Header) */
+        .header { background-color: white; padding: 20px 30px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+        .search-bar input { padding: 8px 15px; border: 1px solid #ddd; border-radius: 4px; width: 250px; }
+        .user-profile { font-weight: bold; cursor: pointer; }
+
+        /* 儀表板內容 (Dashboard) */
+        .dashboard { padding: 30px; }
+        .dashboard h2 { margin-bottom: 20px; color: #2c3e50; }
+
+        /* 數據卡片 (Stats Cards) */
+        .cards-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin-bottom: 30px; }
+        .card { background-color: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+        .card h3 { font-size: 14px; color: #7f8c8d; margin-bottom: 10px; }
+        .card .number { font-size: 24px; font-weight: bold; color: #2c3e50; }
+
+        /* 資料表格 (Data Table) */
+        .table-container { background-color: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+        .table-container h3 { margin-bottom: 15px; }
+        table { width: 100%; border-collapse: collapse; }
+        th, td { padding: 12px 15px; text-align: left; border-bottom: 1px solid #eee; }
+        th { background-color: #f8f9fa; color: #2c3e50; }
+        tr:hover { background-color: #f1f2f6; }
+        .status-active { color: #27ae60; font-weight: bold; }
+        .status-pending { color: #f39c12; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            Hi!Admin!
+        </div>
+        <ul class="nav-links">
+            <li class="active"><a href="#">admin panel</a></li>
+            <li><a href="#settings">settings</a></li>
+        </ul>
+    </aside>
+
+    <main class="main-content">
+        
+        <header class="header">
+            <div class="search-bar">
+                <input type="text" placeholder="搜尋資料...">
+            </div>
+            <div class="user-profile">
+                Hi!Admin!
+            </div>
+        </header>
+
+        <section class="dashboard">
+            <h2>panel...ZLCSC{????h0w_u_Log1n_As_Adm1nistrAt0r????}</h2>
+
+            <div class="cards-container">
+                <div class="card">
+                    <h3>Total Visits</h3>
+                    <div class="number">0</div>
+                </div>
+                <div class="card">
+                    <h3>New Registered Users</h3>
+                    <div class="number">2</div>
+                </div>
+                </div>
+            </div>
+
+            <div class="table-container">
+                <h3>Users</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Username</th>
+                            <th>Registration Date</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>guest</td>
+                            <td>2026-03-20</td>
+                        </tr>
+                        <tr>
+                            <td>chiehhhhh</td>
+                            <td>2026-03-20</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+    </main>
+
+</body>
+</html>
